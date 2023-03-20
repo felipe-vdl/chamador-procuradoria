@@ -70,7 +70,6 @@ export default function AdminPage(props) {
         })
       });
       const data = await response.json();
-      console.log(data);
       setTimeout(() => {
         setIsLoading(false);
       }, 2000);

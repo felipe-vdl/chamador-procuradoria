@@ -19,8 +19,6 @@ export default function HomePage(props) {
       return
     }
 
-    console.log(currentInfo);
-
     const voices = window.speechSynthesis.getVoices();
     let newSpeech = new SpeechSynthesisUtterance(`Número ${currentInfo.password}, ${currentInfo.message ?? ""}.`);
     newSpeech.voice = voices[0];

@@ -49,12 +49,12 @@ export default function Senha() {
       <button
         to={`/senha`}
         onClick={handleGerarSenha}
-        className="shadow-lg shadow-indigo-500 hover:shadow-indigo-600 self-center text-white mb-auto font-bold hover:shadow-blue-500 disabled:bg-indigo-300 disabled:text-slate-100 active:bg-blue-700 p-2 bg-indigo-800 rounded hover:scale-105 transition hover:bg-blue-900 text-[86px] px-8 hover:text-blue-100"
+        className="shadow-lg shadow-indigo-500 self-center text-white mb-auto font-bold hover:shadow-blue-500 disabled:bg-indigo-300 disabled:text-slate-100 active:bg-blue-700 p-2 bg-indigo-800 rounded hover:scale-105 transition hover:bg-blue-900 text-[86px] px-8 hover:text-blue-100"
         disabled={isLoading}
       >
         {!isLoading ? "Imprimir" : "Imprimindo..."}
       </button>
-      <footer className='shadow-inner shadow-indigo-800 mt-auto bg-indigo-800 p-1 text-indigo-200 text-white text-xs text-center'>2023 © Subsecretaria de Tecnologia da Informação — Prefeitura Municipal de Mesquita</footer>
+      <footer className='shadow-inner shadow-indigo-800 mt-auto bg-indigo-800 p-1 text-white text-xs text-center'>2023 © Subsecretaria de Tecnologia da Informação — Prefeitura Municipal de Mesquita</footer>
     </div>
   );
 }

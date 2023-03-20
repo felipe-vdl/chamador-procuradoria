@@ -3,7 +3,6 @@ import prisma from "../../db";
 export default async function Counter(req, res) {
   if (req.method === "POST") {
     const { message } = req.body;
-    console.log(message);
 
     const [updatedMessage, updatedCounter] = await prisma.$transaction([
       prisma.currentMessage.update({ where: { id: 1 }, data: { message } }),
