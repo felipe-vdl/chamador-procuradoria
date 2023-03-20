@@ -88,7 +88,7 @@ export default function AdminPage(props) {
       <div className="shadow-md shadow-blue-800 m-auto bg-blue-300 rounded p-8 border-8 border-indigo-800 text-center text-slate-800 font-bold">
         <p className="text-3xl">Painel</p>
         <span className="text-[96px]">{currentPassword}</span>
-        <p className="text-xl">{currentMessage}</p>
+        <p className="text-xl">Guichê: {currentMessage}</p>
       </div>
       <div className="flex flex-col text-white gap-8 mx-auto px-4">
         <div className='mx-auto'>
@@ -97,7 +97,7 @@ export default function AdminPage(props) {
             type="text"
             value={messageInput}
             onChange={evt => setMessageInput(evt.target.value)}
-            placeholder="Nome / Mensagem"
+            placeholder="Número do Guichê"
             className="p-2 text-slate-800 ouline-none border-2 border-indigo-800 rounded bg-blue-50"
           />
         </div>

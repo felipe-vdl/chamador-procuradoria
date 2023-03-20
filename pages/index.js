@@ -20,7 +20,7 @@ export default function HomePage(props) {
     }
 
     const voices = window.speechSynthesis.getVoices();
-    let newSpeech = new SpeechSynthesisUtterance(`Número ${currentInfo.password}, ${currentInfo.message ?? ""}.`);
+    let newSpeech = new SpeechSynthesisUtterance(`Número ${currentInfo.password}, ${currentInfo.message ? `Guichê: ${currentInfo.message}` : ""}.`);
     newSpeech.voice = voices[0];
     window.speechSynthesis.speak(newSpeech);
     
@@ -63,7 +63,7 @@ export default function HomePage(props) {
         {currentInfo.password}
       </div>
       <div className='text-[80px] w-[95%] mx-auto font-bold bg-blue-300 rounded p-4 border-4 border-t-2 rounded-t-none border-indigo-800 text-center text-slate-800'>
-        {currentInfo.message}
+        Guichê: {currentInfo.message}
       </div>
       <footer className='mt-auto bg-indigo-800 p-1 text-white text-xs text-center'>2023 © Subsecretaria de Tecnologia da Informação — Prefeitura Municipal de Mesquita</footer>
     </div>
